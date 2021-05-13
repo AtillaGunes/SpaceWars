@@ -343,6 +343,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1789191925490356172, guid: d85a7108fb0cb294ab82a4e356db5701,
+        type: 3}
+      propertyPath: m_shotPrefab
+      value: 
+      objectReference: {fileID: 7179409766961504344, guid: 88f61c2fd30269a49a7c1d8b7a09fd2e,
+        type: 3}
+    - target: {fileID: 1789191925735400857, guid: d85a7108fb0cb294ab82a4e356db5701,
+        type: 3}
+      propertyPath: m_shotPrefab
+      value: 
+      objectReference: {fileID: 7179409766961504344, guid: 88f61c2fd30269a49a7c1d8b7a09fd2e,
+        type: 3}
     - target: {fileID: 1789191925782789524, guid: d85a7108fb0cb294ab82a4e356db5701,
         type: 3}
       propertyPath: healthBar
