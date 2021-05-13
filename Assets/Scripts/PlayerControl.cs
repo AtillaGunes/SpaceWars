@@ -41,6 +41,6 @@ public class PlayerControl : MonoBehaviour
         }
 
         
-        transform.position += transform.forward * Time.deltaTime * 170.0f;
+       // transform.position += transform.forward * Time.deltaTime * 100.0f;
     }
 }

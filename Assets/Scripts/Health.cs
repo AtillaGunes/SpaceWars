@@ -22,6 +22,8 @@ public class Health : MonoBehaviour
         {
             DamagePlayer(10);
         }
+
+        
     }
 
     public void DamagePlayer( int damage )
@@ -30,4 +32,13 @@ public class Health : MonoBehaviour
 
         healthBar.SetHealth( curHealth );
     }
+
+    
+  void OnTriggerEnter(Collider other){
+     if(other.CompareTag("enemy")) {
+         DamagePlayer(10);
+        healthBar.SetHealth( curHealth );
+        Destroy(other.gameObject);
+     }
+  }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour {
     
-    float m_Speed = 600f;
+    float m_Speed = 500f;
     
     
 	// Use this for initialization
@@ -24,6 +24,7 @@ public class BulletScript : MonoBehaviour {
         {
             
              Destroy(collision.gameObject);
+             Destroy(gameObject);
             }
             
         }
