@@ -18,12 +18,21 @@ public class CannonBehavior : MonoBehaviour {
 	void Update () 
 	{
 		
-		if (Input.GetKeyDown(KeyCode.Space))
+		 for (int i = 0; i < Input.touchCount; ++i)
+        {
+            if (Input.GetTouch(i).phase == TouchPhase.Began)
+            {
+                GameObject go = GameObject.Instantiate(m_shotPrefab, m_muzzle.position, m_muzzle.rotation) as GameObject;
+			GameObject.Destroy(go, 5f);
+            }
+        }
+    }
+	/*	if (Input.GetKeyDown(KeyCode.Space))
 		{
 			GameObject go = GameObject.Instantiate(m_shotPrefab, m_muzzle.position, m_muzzle.rotation) as GameObject;
 			GameObject.Destroy(go, 5f);
 		}
 	}
-
+ */
 	
 }

@@ -6,6 +6,7 @@ public class PlayerControl : MonoBehaviour
 {
     public Quaternion originalRotationValue; // declare this as a Quaternion
     float rotationResetSpeed = 1.0f;
+    float speed = 120.0f;
     void Start()
     {
         originalRotationValue = transform.rotation;  
@@ -14,7 +15,9 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.A)){
+        
+
+    if(Input.GetKey(KeyCode.A)){
                     transform.position += Vector3.left * Time.deltaTime * 130.0f;
                     transform.Rotate( 0, 0, 0.4f);
         }
@@ -38,9 +41,9 @@ public class PlayerControl : MonoBehaviour
         }
         else {
                 transform.rotation = Quaternion.Slerp(transform.rotation, originalRotationValue, Time.deltaTime * rotationResetSpeed); 
-        }
+        }  
 
-        
+    
        // transform.position += transform.forward * Time.deltaTime * 100.0f;
     }
 }

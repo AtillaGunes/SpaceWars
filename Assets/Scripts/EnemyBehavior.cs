@@ -14,14 +14,9 @@ public class EnemyBehavior : MonoBehaviour
     void Update()
     {
        	//	transform.position -= transform.forward * Time.deltaTime * 2.0f;
-             transform.RotateAround(Vector3.zero, Vector3.forward, 20 * Time.deltaTime);
-             StartCoroutine(Look());
-             
+             transform.RotateAround(Vector3.zero, Vector3.forward, 5 * Time.deltaTime);
+             transform.LookAt(target);           
     }
 
-    public IEnumerator Look()
-    {
-      yield return new WaitForSeconds(0.1f);
-      transform.LookAt(target);
-    }
+    
 }
